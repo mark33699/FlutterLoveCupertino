@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 
 void main() {
 //  runApp(AppleApp());
-  runApp(AndroidApp());
+//  runApp(AndroidApp());
+  runApp(HelloApp());
 }
 
 final List<String> _tonightOption = [
@@ -150,6 +151,32 @@ class _AndroidHomePageState extends State<AndroidHomePage> {
             ],
           ),
         )
+    );
+  }
+}
+
+//- Hello
+
+class HelloApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Hello Demo',
+      home: HelloHomePage(),
+    );
+  }
+}
+
+class HelloHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Hello")),
+      body: Container(
+        alignment: Alignment.center,
+        child: Text("Hello Flutter Web"),
+      ),
     );
   }
 }
